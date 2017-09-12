@@ -28,13 +28,12 @@ import javax.naming.NamingException;
 
 import org.apache.catalina.Engine;
 import org.apache.naming.factory.ResourceLinkFactory;
-import org.gatein.wci.tomcat.TC7ServletContainerContext;
-
 import org.exoplatform.container.BaseContainerLifecyclePlugin;
 import org.exoplatform.container.ExoContainer;
 import org.exoplatform.container.PortalContainer;
 import org.exoplatform.services.log.ExoLogger;
 import org.exoplatform.services.log.Log;
+import org.gatein.wci.wildfly.Wildfly10ServletContainerContext;
 
 /**
  * Created by The eXo Platform SAS Author : eXoPlatform exo@exoplatform.com
@@ -70,11 +69,11 @@ public class DataSourceInjector extends BaseContainerLifecyclePlugin {
 
   private Context getGlobalNamingContext() {
     // TC7ContainerServlet will start when integration.war context is deployed.
-    // The TC7ContainerServlet instantiates the TC7ServletContainerContext.
+    // The TC7ContainerServlet instantiates the Wildfly10ServletContainerContext.
     // The integration.war is started before the PortalContainer starts
-    // So we are sure that the instance TC7ServletContainerContext is instantiated
+    // So we are sure that the instance Wildfly10ServletContainerContext is instantiated
     // If not, an exception will be thrown in initContainer method and the server startup fails
-    TC7ServletContainerContext servletContainerContext = TC7ServletContainerContext.getInstanceIfPresent();
+    Wildfly10ServletContainerContext servletContainerContext = Wildfly10ServletContainerContext.getInstanceIfPresent();
     if (servletContainerContext != null) {
       Engine e = (Engine) servletContainerContext.getEngine();
       return e.getService().getServer().getGlobalNamingContext();
