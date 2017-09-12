@@ -35,6 +35,7 @@
   <modules>
     <module>plf-assemblies</module>
     <module>plf-community-tomcat-standalone</module>
+    <module>plf-community-wildfly-standalone</module>
     <module>plf-dependencies</module>
     <module>plf-exo-tools</module>
     <module>plf-packaging-resources</module>
@@ -42,6 +43,9 @@
     <module>plf-tomcat-integration-webapp</module>
     <module>plf-tomcat-pc-creator-listener</module>
     <module>plf-tomcat-resources</module>
+    <module>plf-wildfly-integration-webapp</module>
+    <module>plf-wildfly-pc-creator-listener</module>
+    <module>plf-wildfly-resources</module>
     <module>plf-community-sources</module>
   </modules>
   <scm>
@@ -206,7 +210,19 @@
       </dependency>
       <dependency>
         <groupId>org.exoplatform.platform.distributions</groupId>
+        <artifactId>plf-wildfly-integration-webapp</artifactId>
+        <version>${project.version}</version>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>org.exoplatform.platform.distributions</groupId>
         <artifactId>plf-tomcat-integration-webapp</artifactId>
+        <version>${project.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>org.exoplatform.platform.distributions</groupId>
+        <artifactId>plf-wildfly-integration-webapp</artifactId>
         <version>${project.version}</version>
         <type>war</type>
       </dependency>
@@ -218,12 +234,29 @@
       </dependency>
       <dependency>
         <groupId>org.exoplatform.platform.distributions</groupId>
+        <artifactId>plf-wildfly-pc-creator-listener</artifactId>
+        <version>${project.version}</version>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>org.exoplatform.platform.distributions</groupId>
         <artifactId>plf-tomcat-pc-creator-listener</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>org.exoplatform.platform.distributions</groupId>
+        <artifactId>plf-wildfly-pc-creator-listener</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.exoplatform.platform.distributions</groupId>
         <artifactId>plf-tomcat-resources</artifactId>
+        <version>${project.version}</version>
+        <type>zip</type>
+      </dependency>
+      <dependency>
+        <groupId>org.exoplatform.platform.distributions</groupId>
+        <artifactId>plf-wildfly-resources</artifactId>
         <version>${project.version}</version>
         <type>zip</type>
       </dependency>
