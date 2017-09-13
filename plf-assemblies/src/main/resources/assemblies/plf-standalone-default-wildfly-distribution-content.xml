@@ -30,7 +30,7 @@
     <!-- Unix shell scripts with exec rights -->
     <fileSet>
       <outputDirectory>/</outputDirectory>
-      <directory>${project.build.directory}/${project.build.finalName}/dependencies/apache-tomcat/apache-tomcat-${org.apache.tomcat.version}/</directory>
+      <directory>${project.build.directory}/${project.build.finalName}/dependencies/wildfly/wildfly-${org.wildfly.version}/</directory>
       <fileMode>0755</fileMode>
       <filtered>false</filtered>
       <lineEnding>keep</lineEnding>
@@ -41,22 +41,16 @@
     <!-- Others files -->
     <fileSet>
       <outputDirectory>/</outputDirectory>
-      <directory>${project.build.directory}/${project.build.finalName}/dependencies/apache-tomcat/apache-tomcat-${org.apache.tomcat.version}/</directory>
+      <directory>${project.build.directory}/${project.build.finalName}/dependencies/wildfly/wildfly-${org.wildfly.version}/</directory>
       <filtered>false</filtered>
       <lineEnding>keep</lineEnding>
       <excludes>
         <exclude>**/*.sh</exclude>
         <!-- We need to exclude everything we override -->
-        <exclude>**/conf/server.xml</exclude>
-        <exclude>**/conf/logging.properties</exclude>
-        <exclude>**/conf/tomcat-users.xml</exclude>
-        <exclude>**/webapps/**</exclude>
         <exclude>**/LICENSE*</exclude>
         <exclude>**/NOTICE*</exclude>
         <exclude>**/RELEASE-NOTES*</exclude>
         <exclude>**/RUNNING*</exclude>
-        <!-- PLF-5893 Wrong warning message when connect with disabled user -->
-        <exclude>**/conf/context.xml</exclude>
       </excludes>
     </fileSet>
     <!-- Unix shell scripts with exec rights -->

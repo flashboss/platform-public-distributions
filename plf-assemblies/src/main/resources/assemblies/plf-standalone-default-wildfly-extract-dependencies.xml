@@ -27,11 +27,11 @@
   <includeBaseDirectory>true</includeBaseDirectory>
   <baseDirectory>dependencies</baseDirectory>
   <dependencySets>
-    <!-- Apache Tomcat Bundle -->
+    <!-- Apache WildFly Bundle -->
     <dependencySet>
-      <outputDirectory>apache-tomcat</outputDirectory>
+      <outputDirectory>wildfly</outputDirectory>
       <includes>
-        <include>org.apache.tomcat:tomcat:zip</include>
+        <include>org.wildfly:wildfly-dist:zip</include>
       </includes>
       <scope>provided</scope>
       <unpack>true</unpack>
