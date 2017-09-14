@@ -156,7 +156,7 @@
     </fileSet>
     <!-- Configuration sample files -->
     <fileSet>
-      <outputDirectory>/gatein/conf</outputDirectory>
+      <outputDirectory>/standalone/configuration/gatein</outputDirectory>
       <directory>${project.build.directory}/${project.build.finalName}/dependencies/platform-extension-config/conf/platform/</directory>
       <filtered>false</filtered>
       <lineEnding>windows</lineEnding>
@@ -193,7 +193,7 @@
     </dependencySet>
     <!-- Common Gatein Configuration -->
     <dependencySet>
-      <outputDirectory>/gatein/conf</outputDirectory>
+      <outputDirectory>/standalone/configuration/gatein</outputDirectory>
       <includes>
         <include>org.exoplatform.platform.distributions:plf-packaging-resources:zip</include>
       </includes>
@@ -230,11 +230,11 @@
       </unpackOptions>
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
-    <!-- We only authorize this additional tomcat artifact for now -->
+    <!-- We only authorize this additional wildfly artifact for now -->
     <dependencySet>
-      <outputDirectory>/lib</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear/lib</outputDirectory>
       <includes>
-        <!-- This artifact isn't by default in tomcat -->
+        <!-- This artifact isn't by default in wildfly -->
         <include>org.apache.tomcat:tomcat-catalina-jmx-remote:*</include>
       </includes>
       <scope>provided</scope>
@@ -246,7 +246,7 @@
     <!-- ================================ -->
     <!-- Portal wars -->
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.gatein.portal:exo.portal.web.eXoResources:war</include>
       </includes>
@@ -255,7 +255,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.platform-ui:platform-ui-skin:war</include>
       </includes>
@@ -264,7 +264,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.gatein.portal:exo.portal.web.rest:war</include>
       </includes>
@@ -273,7 +273,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.gatein.portal:exo.portal.portlet.web:war</include>
       </includes>
@@ -282,7 +282,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.gatein.portal:exo.portal.web.portal:war</include>
       </includes>
@@ -291,7 +291,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.gatein.portal:exo.portal.gadgets-server:war</include>
       </includes>
@@ -300,7 +300,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.gatein.portal:exo.portal.eXoGadgets:war</include>
       </includes>
@@ -309,7 +309,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.gatein.portal:exo.portal.portlet.exoadmin:war</include>
       </includes>
@@ -318,7 +318,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.gatein.portal:exo.portal.portlet.dashboard:war</include>
       </includes>
@@ -328,7 +328,7 @@
     </dependencySet>
     <!-- Commons wars -->
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.commons:commons-comet-webapp:war</include>
       </includes>
@@ -337,7 +337,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.commons:commons-extension-webapp:war</include>
       </includes>
@@ -347,7 +347,7 @@
     </dependencySet>
     <!-- Social wars -->
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.social:social-webapp-resources:war</include>
       </includes>
@@ -356,7 +356,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.social:social-webapp-portlet:war</include>
       </includes>
@@ -365,7 +365,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
 		<dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.social:social-webapp-juzu-portlet:war</include>
       </includes>
@@ -374,7 +374,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
 		<dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.social:social-notification-extension:war</include>
       </includes>
@@ -383,7 +383,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.social:social-webapp-opensocial:war</include>
       </includes>
@@ -392,7 +392,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.social:social-extension-war:war</include>
       </includes>
@@ -402,7 +402,7 @@
     </dependencySet>
     <!-- ECMS wars -->
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.ecms:ecms-ext-authoring-apps:war</include>
       </includes>
@@ -411,7 +411,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.ecms:ecms-ext-fastcontentcreator-portlet:war</include>
       </includes>
@@ -420,7 +420,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.ecms:ecms-core-webapp:war</include>
       </includes>
@@ -429,7 +429,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.ecms:ecms-apps-portlet-explorer:war</include>
       </includes>
@@ -438,7 +438,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.ecms:ecms-apps-portlet-presentation:war</include>
       </includes>
@@ -447,7 +447,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.ecms:ecms-apps-portlet-search:war</include>
       </includes>
@@ -456,7 +456,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.ecms:ecms-apps-portlet-seo:war</include>
       </includes>
@@ -465,7 +465,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.ecms:ecms-apps-resources-wcm:war</include>
       </includes>
@@ -474,7 +474,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.ecms:ecms-apps-portlet-administration:war</include>
       </includes>
@@ -483,7 +483,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.ecms:ecms-packaging-wcm-webapp:war</include>
       </includes>
@@ -493,7 +493,7 @@
     </dependencySet>
     <!-- Forum wars -->
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.forum:forum-forum-webapp:war</include>
       </includes>
@@ -503,7 +503,7 @@
     </dependencySet>
     <!-- Calendar wars -->
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.calendar:calendar-webapp:war</include>
       </includes>
@@ -513,7 +513,7 @@
     </dependencySet>
     <!-- Wiki wars -->
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.wiki:wiki-webapp:war</include>
       </includes>
@@ -523,7 +523,7 @@
     </dependencySet>
     <!-- Integration wars -->
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.platform.distributions:plf-wildfly-integration-webapp:war</include>
       </includes>
@@ -532,7 +532,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.integration:integ-search-portlet:war</include>
       </includes>
@@ -542,7 +542,7 @@
     </dependencySet>
     <!-- Platform wars -->
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.platform.distributions:plf-root-webapp:war</include>
       </includes>
@@ -551,7 +551,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.platform:platform-extension-portlet-branding:war</include>
       </includes>
@@ -560,7 +560,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-        <outputDirectory>/webapps</outputDirectory>
+        <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
         <includes>
             <include>org.exoplatform.platform:platform-extension-portlets-platformNavigation:war</include>
         </includes>
@@ -569,7 +569,7 @@
         <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.platform:platform-registration:war</include>
       </includes>
@@ -578,7 +578,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.platform:platform-extension-portlets-homepage:war</include>
       </includes>
@@ -587,7 +587,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.platform:platform-extension-portlets-notification:war</include>
       </includes>
@@ -596,7 +596,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.platform:platform-extension-resources:war</include>
       </includes>
@@ -605,7 +605,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.platform:platform-extension-webapp:war</include>
       </includes>
@@ -615,7 +615,7 @@
     </dependencySet>
     <!-- Platform Gadgets wars -->
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.platform:platform-exo-gadget-pack-gadget-pack:war</include>
       </includes>
@@ -624,7 +624,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.platform:platform-sample-gadgets-sample-exo-gadget-resources:war</include>
       </includes>
@@ -633,7 +633,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.platform:platform-sample-gadgets-sample-gadgets:war</include>
       </includes>
@@ -643,7 +643,7 @@
     </dependencySet>
     <!-- Platform INTRANET website wars -->
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.platform:platform-sample-acme-intranet-webapp:war</include>
       </includes>
@@ -652,7 +652,7 @@
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
     <dependencySet>
-      <outputDirectory>/webapps</outputDirectory>
+      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
         <include>org.exoplatform.platform:platform-sample-acme-intranet-portlet:war</include>
       </includes>
@@ -662,7 +662,7 @@
     </dependencySet>
   </dependencySets>
   <componentDescriptors>
-    <componentDescriptor>assemblies/plf-copy-libraries-component.xml</componentDescriptor>
+    <componentDescriptor>assemblies/plf-copy-libraries-wildfly-component.xml</componentDescriptor>
     <componentDescriptor>assemblies/plf-addons-component.xml</componentDescriptor>
     <componentDescriptor>assemblies/plf-exo-tools-component.xml</componentDescriptor>
   </componentDescriptors>
