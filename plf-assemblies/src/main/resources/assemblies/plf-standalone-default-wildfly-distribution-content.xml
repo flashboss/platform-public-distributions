@@ -230,17 +230,6 @@
       </unpackOptions>
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
-    <!-- We only authorize this additional wildfly artifact for now -->
-    <dependencySet>
-      <outputDirectory>/standalone/deployments/platform.ear/lib</outputDirectory>
-      <includes>
-        <!-- This artifact isn't by default in wildfly -->
-        <include>org.apache.tomcat:tomcat-catalina-jmx-remote:*</include>
-      </includes>
-      <scope>provided</scope>
-      <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
-      <useProjectArtifact>false</useProjectArtifact>
-    </dependencySet>
     <!-- ================================ -->
     <!-- we reference each war to package -->
     <!-- ================================ -->
