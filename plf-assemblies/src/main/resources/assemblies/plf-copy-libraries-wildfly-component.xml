@@ -103,7 +103,6 @@
         <exclude>io.undertow*:*:*</exclude>
         <exclude>*:mail:*</exclude>
         <exclude>org.hornetq*:*:*</exclude>
-        <exclude>org.hornetq*:*:*</exclude>
         <exclude>org.apache.activemq:*:*</exclude>
       </excludes>
       <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
