@@ -1,0 +1,1 @@
+Dependencies: org.wildfly.extension.undertow export services,io.undertow.core export,io.undertow.servlet export

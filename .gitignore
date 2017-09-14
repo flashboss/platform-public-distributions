@@ -13,6 +13,7 @@
 *.zip
 *.war
 *.ear
+!platform.ear
 *.sar
 *.class
 
