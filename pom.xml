@@ -35,7 +35,6 @@
 		<module>plf-tomcat-integration-webapp</module>
 		<module>plf-tomcat-pc-creator-listener</module>
 		<module>plf-tomcat-resources</module>
-		<module>plf-wildfly-integration-webapp</module>
 		<module>plf-wildfly-pc-creator-listener</module>
 		<module>plf-wildfly-resources</module>
 		<module>plf-community-sources</module>

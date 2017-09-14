@@ -510,16 +510,6 @@
       <outputFileNameMapping>wiki.war</outputFileNameMapping>
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
-    <!-- Integration wars -->
-    <dependencySet>
-      <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
-      <includes>
-        <include>org.exoplatform.platform.distributions:plf-wildfly-integration-webapp:war</include>
-      </includes>
-      <scope>provided</scope>
-      <outputFileNameMapping>integration.war</outputFileNameMapping>
-      <useProjectArtifact>false</useProjectArtifact>
-    </dependencySet>
     <dependencySet>
       <outputDirectory>/standalone/deployments/platform.ear</outputDirectory>
       <includes>
