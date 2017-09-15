@@ -124,7 +124,7 @@
             <configuration>
               <attach>false</attach>
               <descriptorRefs>
-                <descriptorRef>plf-standalone-wildfly-server-xml-hsqldb</descriptorRef>
+                <descriptorRef>plf-standalone-wildfly-server</descriptorRef>
               </descriptorRefs>
               <filters>
                 <filter>${project.build.directory}/${project.build.finalName}/dependencies/plf-wildfly-resources/conf/hsqldb.filters.properties</filter>
@@ -141,7 +141,7 @@
             <configuration>
               <attach>false</attach>
               <descriptorRefs>
-                <descriptorRef>plf-standalone-wildfly-server-xml-mysql</descriptorRef>
+                <descriptorRef>plf-standalone-wildfly-server</descriptorRef>
               </descriptorRefs>
               <filters>
                 <filter>${project.build.directory}/${project.build.finalName}/dependencies/plf-wildfly-resources/conf/mysql.filters.properties</filter>
