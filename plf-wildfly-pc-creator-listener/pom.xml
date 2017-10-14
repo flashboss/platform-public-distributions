@@ -49,6 +49,11 @@
       <groupId>org.exoplatform.gatein.wci</groupId>
       <artifactId>wci-wildfly10</artifactId>
     </dependency>
+    <dependency>
+      <groupId>org.wildfly</groupId>
+      <artifactId>wildfly-system-jmx</artifactId>
+      <version>${org.wildfly.version}</version>
+    </dependency>
   </dependencies>
   <profiles>
     <profile>

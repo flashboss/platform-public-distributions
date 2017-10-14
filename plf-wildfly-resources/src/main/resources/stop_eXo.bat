@@ -21,23 +21,23 @@
 
 if "%OS%" == "Windows_NT" setlocal
 
-rem Guess CATALINA_HOME if not defined
+rem Guess WILDFLY_HOME if not defined
 set "CURRENT_DIR=%cd%"
-if not "%CATALINA_HOME%" == "" goto gotHome
-set "CATALINA_HOME=%CURRENT_DIR%"
-if exist "%CATALINA_HOME%\bin\catalina.bat" goto okHome
-set "CATALINA_HOME=%cd%"
+if not "%WILDFLY_HOME%" == "" goto gotHome
+set "WILDFLY_HOME=%CURRENT_DIR%"
+if exist "%WILDFLY_HOME%\bin\standalone.bat" goto okHome
+set "WILDFLY_HOME=%cd%"
 cd "%CURRENT_DIR%"
 :gotHome
-if exist "%CATALINA_HOME%\bin\catalina.bat" goto okHome
-echo The CATALINA_HOME environment variable is not defined correctly
+if exist "%WILDFLY_HOME%\bin\standalone.bat" goto okHome
+echo The WILDFLY_HOME environment variable is not defined correctly
 echo This environment variable is needed to run this program
 goto end
 :okHome
 
 set "PRG=%~nx0"
 
-set "EXECUTABLE=%CATALINA_HOME%\bin\catalina.bat"
+set "EXECUTABLE=%WILDFLY_HOME%\bin\standalone.bat"
 
 rem Check that target executable exists
 if exist "%EXECUTABLE%" goto okExec

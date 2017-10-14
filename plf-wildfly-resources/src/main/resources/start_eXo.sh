@@ -41,7 +41,7 @@ while [ -h "$PRG" ] ; do
 done
  
 PRGDIR=`dirname "$PRG"`
-EXECUTABLE=bin/catalina.sh
+EXECUTABLE=bin/standalone.sh
 
 # Check that target executable exists
 if $os400; then
@@ -75,8 +75,6 @@ usage(){
   exit 1
 }
 
-COMMAND="run"
-
 # Process command line parameters
 while [ "$1" != "" ]; do
   case $1 in
@@ -99,11 +97,10 @@ while [ "$1" != "" ]; do
       export EXO_DATA_DIR=$1
     ;;
     -b | --background )
-      COMMAND="start"
       # Don't activate console logs if launched as background task
       export EXO_LOGS_DISPLAY_CONSOLE=${EXO_LOGS_DISPLAY_CONSOLE:-false}
       # Define a PID file is launched in background
-      export CATALINA_PID=${CATALINA_PID:-"$PRGDIR/temp/catalina.pid"}
+      export WILDFLY_PID=${WILDFLY_PID:-"$PRGDIR/temp/wildfly.pid"}
     ;;
     -c | --color )
       # Enforce colors in console
@@ -130,4 +127,4 @@ done
 # Activate console logs if we aren't in background
 export EXO_LOGS_DISPLAY_CONSOLE=${EXO_LOGS_DISPLAY_CONSOLE:-true}
 
-exec "$PRGDIR"/"$EXECUTABLE" "$COMMAND"
+exec "$PRGDIR"/"$EXECUTABLE"

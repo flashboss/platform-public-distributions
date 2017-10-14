@@ -33,7 +33,7 @@ while [ -h "$PRG" ] ; do
 done
  
 PRGDIR=`dirname "$PRG"`
-EXECUTABLE=bin/catalina.sh
+EXECUTABLE=bin/standalone.sh
 
 # Check that target executable exists
 if [ ! -x "$PRGDIR"/"$EXECUTABLE" ]; then
@@ -66,6 +66,6 @@ while [ "$1" != "" ]; do
     shift
 done
 
-export CATALINA_PID=${CATALINA_PID:-"$PRGDIR/temp/catalina.pid"}
+export WILDFLY_PID=${WILDFLY_PID:-"$PRGDIR/temp/wildfly.pid"}
 
 exec "$PRGDIR"/"$EXECUTABLE" stop "$@"

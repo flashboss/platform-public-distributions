@@ -21,23 +21,23 @@
 
 if "%OS%" == "Windows_NT" setlocal
 
-rem Guess CATALINA_HOME if not defined
+rem Guess JBOSS_HOME if not defined
 set "CURRENT_DIR=%cd%"
-if not "%CATALINA_HOME%" == "" goto gotHome
-set "CATALINA_HOME=%CURRENT_DIR%"
-if exist "%CATALINA_HOME%\bin\catalina.bat" goto okHome
-set "CATALINA_HOME=%cd%"
+if not "%JBOSS_HOME%" == "" goto gotHome
+set "JBOSS_HOME=%CURRENT_DIR%"
+if exist "%JBOSS_HOME%\bin\standalone.bat" goto okHome
+set "JBOSS_HOME=%cd%"
 cd "%CURRENT_DIR%"
 :gotHome
-if exist "%CATALINA_HOME%\bin\catalina.bat" goto okHome
-echo The CATALINA_HOME environment variable is not defined correctly
+if exist "%JBOSS_HOME%\bin\standalone.bat" goto okHome
+echo The JBOSS_HOME environment variable is not defined correctly
 echo This environment variable is needed to run this program
 goto end
 :okHome
 
 set "PRG=%~nx0"
 
-set "EXECUTABLE=%CATALINA_HOME%\bin\catalina.bat"
+set "EXECUTABLE=%JBOSS_HOME%\bin\standalone.bat"
 
 rem Check that target executable exists
 if exist "%EXECUTABLE%" goto okExec
@@ -45,8 +45,6 @@ echo Cannot find "%EXECUTABLE%"
 echo This file is needed to run this program
 goto end
 :okExec
-
-set COMMAND=run
 
 rem Process command line parameters
 :setArgs
@@ -69,12 +67,10 @@ if /I "%1" EQU "--data" (
   shift
 ) else (
 if /I "%1" EQU "--background" (
-  SET COMMAND=start
   rem Don't activate console logs if launched as background task
   IF NOT DEFINED EXO_LOGS_DISPLAY_CONSOLE SET EXO_LOGS_DISPLAY_CONSOLE=false
 ) else (
 if /I "%1" EQU "-b" (
-  SET COMMAND=start
   rem Don't activate console logs if launched as background task
   IF NOT DEFINED EXO_LOGS_DISPLAY_CONSOLE SET EXO_LOGS_DISPLAY_CONSOLE=false
 ) else (
@@ -129,7 +125,7 @@ goto start
 :doneUsage
 
 :start
-call "%EXECUTABLE%" %COMMAND%
+call "%EXECUTABLE%"
 :doneStart
 
 :end
