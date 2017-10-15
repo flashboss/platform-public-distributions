@@ -5,7 +5,6 @@
 	<application-name>platform</application-name>
 	<initialize-in-order>false</initialize-in-order>
 
-
 	<module>
 		<web>
 			<web-uri>ROOT.war</web-uri>
@@ -276,22 +275,4 @@
 			<context-root>platformNavigation</context-root>
 		</web>
 	</module>
-	<resource-ref>
-		<res-ref-name>java:app/exo-idm_portal</res-ref-name>
-		<res-type>javax.sql.DataSource</res-type>
-		<res-auth>Container</res-auth>
-		<lookup-name>java:app/exo-idm_portal</lookup-name>
-	</resource-ref>
-	<resource-ref>
-		<res-ref-name>java:app/exo-jcr_portal</res-ref-name>
-		<res-type>javax.sql.DataSource</res-type>
-		<res-auth>Container</res-auth>
-		<lookup-name>java:app/exo-jcr_portal</lookup-name>
-	</resource-ref>
-	<resource-ref>
-		<res-ref-name>java:app/exo-jpa_portal</res-ref-name>
-		<res-type>javax.sql.DataSource</res-type>
-		<res-auth>Container</res-auth>
-		<lookup-name>java:app/exo-jpa_portal</lookup-name>
-	</resource-ref>
 </application>
